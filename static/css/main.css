@@ -72,6 +72,10 @@ h1 {
 .product a h5, .product a .price {
     color: #666;
 }
+.product.col-md-3 {
+    min-height: 230px;
+}
+
 
 h4.product-name {
     font-family: 'Lily Script One', cursive;
