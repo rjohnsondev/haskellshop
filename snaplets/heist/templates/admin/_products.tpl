@@ -26,7 +26,7 @@
               <th>Price</th>
               <th></th>
             </tr>
-            <product_list>
+            <product_list_unfiltered>
               <tr>
                 <td><product_id /></td>
                 <td><img src="http://localhost:8000/static/img/products/${product_hash}_sml.jpg" /></td>
@@ -36,7 +36,7 @@
                   <a href="/admin/new_product?product_id=${product_id}" class="btn btn-default">Edit</a>
                 </td>
               </tr>
-            </product_list>
+            </product_list_unfiltered>
           </table>
           <a class="btn btn-default" href="new_product" role="button">Add New Product</a>
         </div>

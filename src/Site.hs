@@ -45,6 +45,7 @@ allSplices = (do "alerts"                    ## renderAlerts alertRuntime
                  "admin_category_tree"       ## renderCategoriesCompiled
                  "category_list"             ## renderCategoryList categoryListRuntime
                  "product_list"              ## renderProductList productListFilteredRuntime
+                 "product_list_unfiltered"   ## renderProductList productListRuntime
                  "product"                   ## renderProduct productRuntime
                  "top_level_categories"      ## renderCategories categoriesTopLevelRuntime
                  "categories"                ## renderCategories categoriesRuntime
