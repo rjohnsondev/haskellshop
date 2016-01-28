@@ -101,7 +101,7 @@
 </product>
 <script>
 $('.img-thumbnail').click(function(e) {
-  $("#product-image").attr("src", "/static/img/products/" + $(this).data("hash") + ".jpg");
+  $("#product-image").attr("src", "/static/img/products/" + $(this).data("hash") + "_orig.jpg");
 });
 </script>
 </apply>
