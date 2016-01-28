@@ -1,0 +1,12 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- '.'
+extra-deps:
+- image-type-0.1.0.0
+- resource-pool-catchio-0.2.1.0
+- snap-loader-dynamic-0.10.0.3
+- snap-loader-static-0.9.0.2
+- snaplet-postgresql-simple-0.6.0.4
+- text-1.2.2.0
+resolver: lts-4.2

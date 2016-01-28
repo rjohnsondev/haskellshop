@@ -1,0 +1,83 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lily Script One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lily Script One'), local('LilyScriptOne-Regular'), url(/static/fonts/uPWsLVW8uiXqIBnE8ZwGPKW9WqC4OJJkfgA_jCJuPCQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lily Script One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lily Script One'), local('LilyScriptOne-Regular'), url(/static/fonts/uPWsLVW8uiXqIBnE8ZwGPCJccsb45t3MJKcv5BJtrIs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.cart {
+    vertical-align: bottom;
+    font-size: 135%
+}
+
+
+#nav-bar-title {
+    font-family: 'Lily Script One', cursive;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 180%;
+}
+
+h1 {
+    font-family: 'Lily Script One', cursive;
+}
+
+
+.jumbotron {
+    background: #e6e6e6;
+}
+.jumbotron .container {
+    padding: 15px;
+    background: url(/static/img/catbg.jpg) bottom right no-repeat #e6e6e6;
+    text-shadow: 1px 1px 3px #e6e6e6;
+}
+
+
+.breadcrumb a.active {
+    color: #666;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.product a:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 3px #CCC;
+}
+.product a h4 {
+    color: #333;
+}
+.product a h5, .product a .price {
+    color: #666;
+}
+
+h4.product-name {
+    font-family: 'Lily Script One', cursive;
+    font-size: 24px;
+}
+h3.product-name {
+    font-family: 'Lily Script One', cursive;
+    font-size: 30px;
+}

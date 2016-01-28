@@ -1,0 +1,8 @@
+.cabal-sandbox
+.ghci
+cabal.sandbox.config
+dist
+log/*
+static/img/products/*
+*-hi
+.stack-work

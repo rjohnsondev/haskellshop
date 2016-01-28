@@ -1,0 +1,78 @@
+Name:                haskellshop
+Version:             0.1
+Synopsis:            Project Synopsis Here
+Description:         Project Description Here
+License:             AllRightsReserved
+Author:              Author
+Maintainer:          maintainer@example.com
+Stability:           Experimental
+Category:            Web
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Flag development
+  Description: Whether to build the server in development (interpreted) mode
+  Default: False
+
+Flag old-base
+  default: False
+  manual: False
+
+Executable haskellshop
+  hs-source-dirs: src
+  main-is: Main.hs
+
+-- to exclude locally installed packages ➜ [~/D/haskellshop git:(master) ✗] cabal install -f development --shadow-installed-packages data-default containers transformers resourcet --force-reinstalls
+  Build-depends:
+    scientific                >= 0.3.4   && < 0.4.0,
+    postgresql-simple         >= 0.5.1.2  && < 0.6.0,
+    bytestring                >= 0.10.6   && < 0.11,
+    heist                     >= 0.14.1.1    && < 0.15,
+    blaze-builder             >= 0.4.0.1,
+    blaze-html                >= 0.8.1.1,
+    MonadCatchIO-transformers >= 0.3.1.3   && < 0.4,
+    mtl                       >= 2.2.1       && < 3,
+    snap                      >= 0.14.0.6    && < 0.15,
+    snap-core                 >= 0.9.8     && < 0.10,
+    snap-server               >= 0.9.5.1     && < 0.10,
+    snap-loader-static        >= 0.9.0.2     && < 0.10,
+    snap-loader-dynamic       >= 0.10,
+    snaplet-postgresql-simple >= 0.6.0.4 && < 0.7,
+    text                      >= 1.2.2    && < 1.3,
+    time                      >= 1.5 && < 1.6,
+    xmlhtml                   >= 0.2.3.4,
+    transformers              >= 0.4.2 && < 0.5,
+    containers                >= 0.5,
+    image-type                >= 0.1,
+    cryptohash                >= 0.11.6,
+    directory                 >= 1.2,
+    gd                        >= 3000.7.3,
+    markdown                  >= 0.1.13.2,
+    map-syntax                >= 0.2
+
+  if flag(old-base)
+    build-depends:
+      base                      >= 4        && < 4.4,
+      lens                      >= 3.7.6    && < 3.8
+  else
+    build-depends:
+      base                      >= 4.4      && < 5,
+      lens                      >= 3.7.6
+
+  if flag(development)
+    build-depends:
+      snap-loader-dynamic == 0.10.*
+    cpp-options: -DDEVELOPMENT
+    -- In development mode, speed is already going to suffer, so skip
+    -- the fancy optimization flags.  Additionally, disable all
+    -- warnings.  The hint library doesn't give an option to execute
+    -- compiled code when there were also warnings, so disabling
+    -- warnings allows quicker workflow.
+    ghc-options: -threaded -w
+  else
+    if impl(ghc >= 6.12.0)
+      ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
+                   -fno-warn-orphans -fno-warn-unused-do-bind
+    else
+      ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
+                   -fno-warn-orphans
