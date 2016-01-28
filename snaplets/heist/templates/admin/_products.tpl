@@ -29,7 +29,7 @@
             <product_list_unfiltered>
               <tr>
                 <td><product_id /></td>
-                <td><img src="http://localhost:8000/static/img/products/${product_hash}_sml.jpg" /></td>
+                <td><img src="/static/img/products/${product_hash}_sml.jpg" /></td>
                 <td><product_name /></td>
                 <td><product_base_price /></td>
                 <td>
